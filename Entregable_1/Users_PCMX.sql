@@ -1,7 +1,5 @@
 -- Creamos la base de datos con el nombre de Bitacora
 CREATE DATABASE Bitacora;
-
--- Activamos el uso de la DB 
 USE Bitacora;
 
 -- Tabla Usuarios que contenga la informacion principal de los usuarios
@@ -43,7 +41,7 @@ CREATE TABLE Licenciamiento (
     FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
 );
 
--- Despues de crear las tablas procedemos a insertar datos con datos al azar para no generar conflicto con datos reales
+-- Despues de crear las tablas procedemos a insertar datos en la tabla de Usuarios con datos al azar para no generar conflicto con datos reales
 INSERT INTO usuarios (id_usuario, codigo_usuario, nombre, apellido_paterno, apellido_materno, email, unidad_de_negocio, fecha_ingreso) VALUES
  (1, '43960', 'Dael', 'Ennever', 'Matthewman', 'dmatthewman0@devhub.com', 'Mexico', '2009-07-26'),
  (2, '92260', 'Bobbe', 'Simonyi', 'Klosser', 'bklosser1@creativecommons.org', 'Mexico', '2008-06-14'),
@@ -95,3 +93,109 @@ INSERT INTO usuarios (id_usuario, codigo_usuario, nombre, apellido_paterno, apel
  (48, '27722', 'Ferguson', 'Rhyme', 'Duffie', 'fduffie1b@eepurl.com', 'Mexico', '2028-01-09'),
  (49, '30414', 'Marlyn', 'Bisterfeld', 'Dankov', 'mdankov1c@de.vu', 'Mexico', '2011-09-04'),
  (50, '33993', 'Paule', 'Fulham', 'Ranstead', 'pranstead1d@tamu.edu', 'Mexico', '2013-03-26');
+
+ -- Despues insertamos los datos en la tabla credenciales
+INSERT INTO Credenciales (id_credenciales, id_usuario, cre_office365, cre_equipo, user_netship, cre_netship, activo) VALUES
+(NULL, 1,  'Ofc365!001', 'PCpass#001', 'usr001', 'Net001', TRUE),
+(NULL, 2,  'Ofc365!002', 'PCpass#002', 'usr002', 'Net002', FALSE),
+(NULL, 3,  'Ofc365!003', 'PCpass#003', 'usr003', 'Net003', TRUE),
+(NULL, 4,  'Ofc365!004', 'PCpass#004', 'usr004', 'Net004', FALSE),
+(NULL, 5,  'Ofc365!005', 'PCpass#005', 'usr005', 'Net005', TRUE),
+(NULL, 6,  'Ofc365!006', 'PCpass#006', 'usr006', 'Net006', FALSE),
+(NULL, 7,  'Ofc365!007', 'PCpass#007', 'usr007', 'Net007', TRUE),
+(NULL, 8,  'Ofc365!008', 'PCpass#008', 'usr008', 'Net008', FALSE),
+(NULL, 9,  'Ofc365!009', 'PCpass#009', 'usr009', 'Net009', TRUE),
+(NULL, 10, 'Ofc365!010', 'PCpass#010', 'usr010', 'Net010', FALSE),
+(NULL, 11, 'Ofc365!011', 'PCpass#011', 'usr011', 'Net011', TRUE),
+(NULL, 12, 'Ofc365!012', 'PCpass#012', 'usr012', 'Net012', FALSE),
+(NULL, 13, 'Ofc365!013', 'PCpass#013', 'usr013', 'Net013', TRUE),
+(NULL, 14, 'Ofc365!014', 'PCpass#014', 'usr014', 'Net014', FALSE),
+(NULL, 15, 'Ofc365!015', 'PCpass#015', 'usr015', 'Net015', TRUE),
+(NULL, 16, 'Ofc365!016', 'PCpass#016', 'usr016', 'Net016', FALSE),
+(NULL, 17, 'Ofc365!017', 'PCpass#017', 'usr017', 'Net017', TRUE),
+(NULL, 18, 'Ofc365!018', 'PCpass#018', 'usr018', 'Net018', FALSE),
+(NULL, 19, 'Ofc365!019', 'PCpass#019', 'usr019', 'Net019', TRUE),
+(NULL, 20, 'Ofc365!020', 'PCpass#020', 'usr020', 'Net020', FALSE),
+(NULL, 21, 'Ofc365!021', 'PCpass#021', 'usr021', 'Net021', TRUE),
+(NULL, 22, 'Ofc365!022', 'PCpass#022', 'usr022', 'Net022', FALSE),
+(NULL, 23, 'Ofc365!023', 'PCpass#023', 'usr023', 'Net023', TRUE),
+(NULL, 24, 'Ofc365!024', 'PCpass#024', 'usr024', 'Net024', FALSE),
+(NULL, 25, 'Ofc365!025', 'PCpass#025', 'usr025', 'Net025', TRUE),
+(NULL, 26, 'Ofc365!026', 'PCpass#026', 'usr026', 'Net026', FALSE),
+(NULL, 27, 'Ofc365!027', 'PCpass#027', 'usr027', 'Net027', TRUE),
+(NULL, 28, 'Ofc365!028', 'PCpass#028', 'usr028', 'Net028', FALSE),
+(NULL, 29, 'Ofc365!029', 'PCpass#029', 'usr029', 'Net029', TRUE),
+(NULL, 30, 'Ofc365!030', 'PCpass#030', 'usr030', 'Net030', FALSE),
+(NULL, 31, 'Ofc365!031', 'PCpass#031', 'usr031', 'Net031', TRUE),
+(NULL, 32, 'Ofc365!032', 'PCpass#032', 'usr032', 'Net032', FALSE),
+(NULL, 33, 'Ofc365!033', 'PCpass#033', 'usr033', 'Net033', TRUE),
+(NULL, 34, 'Ofc365!034', 'PCpass#034', 'usr034', 'Net034', FALSE),
+(NULL, 35, 'Ofc365!035', 'PCpass#035', 'usr035', 'Net035', TRUE),
+(NULL, 36, 'Ofc365!036', 'PCpass#036', 'usr036', 'Net036', FALSE),
+(NULL, 37, 'Ofc365!037', 'PCpass#037', 'usr037', 'Net037', TRUE),
+(NULL, 38, 'Ofc365!038', 'PCpass#038', 'usr038', 'Net038', FALSE),
+(NULL, 39, 'Ofc365!039', 'PCpass#039', 'usr039', 'Net039', TRUE),
+(NULL, 40, 'Ofc365!040', 'PCpass#040', 'usr040', 'Net040', FALSE),
+(NULL, 41, 'Ofc365!041', 'PCpass#041', 'usr041', 'Net041', TRUE),
+(NULL, 42, 'Ofc365!042', 'PCpass#042', 'usr042', 'Net042', FALSE),
+(NULL, 43, 'Ofc365!043', 'PCpass#043', 'usr043', 'Net043', TRUE),
+(NULL, 44, 'Ofc365!044', 'PCpass#044', 'usr044', 'Net044', FALSE),
+(NULL, 45, 'Ofc365!045', 'PCpass#045', 'usr045', 'Net045', TRUE),
+(NULL, 46, 'Ofc365!046', 'PCpass#046', 'usr046', 'Net046', FALSE),
+(NULL, 47, 'Ofc365!047', 'PCpass#047', 'usr047', 'Net047', TRUE),
+(NULL, 48, 'Ofc365!048', 'PCpass#048', 'usr048', 'Net048', FALSE),
+(NULL, 49, 'Ofc365!049', 'PCpass#049', 'usr049', 'Net049', TRUE),
+(NULL, 50, 'Ofc365!050', 'PCpass#050', 'usr050', 'Net050', FALSE);
+
+-- Despues insertamos los datos en la tabla credenciales
+INSERT INTO Licenciamiento (id_licenciamiento, id_usuario, nombre_equipo, nombre_dominio, correo_maestro_office365, numero_serie_office365, fecha_compra_office365, numero_serie_antivirus, fecha_compra_antivirus, activo) VALUES
+(NULL, 1, 'PC-001', 'DOMINIO.COM', 'dmatthewman0@devhub.com', 'OFF-001-XYZ', '2020-04-06', 'ANT-001-ABC', '2023-06-10', TRUE),
+(NULL, 2, 'PC-002', 'DOMINIO.COM', 'bklosser1@creativecommons.org', 'OFF-002-XYZ', '2023-11-07', 'ANT-002-ABC', '2018-03-30', FALSE),
+(NULL, 3, 'PC-003', 'DOMINIO.COM', 'whoggan2@theguardian.com', 'OFF-003-XYZ', '2019-04-29', 'ANT-003-ABC', '2022-09-27', TRUE),
+(NULL, 4, 'PC-004', 'DOMINIO.COM', 'cbass3@4shared.com', 'OFF-004-XYZ', '2021-10-07', 'ANT-004-ABC', '2025-01-05', FALSE),
+(NULL, 5, 'PC-005', 'DOMINIO.COM', 'bhaug4@networksolutions.com', 'OFF-005-XYZ', '2021-12-27', 'ANT-005-ABC', '2025-03-05', TRUE),
+(NULL, 6, 'PC-006', 'DOMINIO.COM', 'abarizeret5@columbia.edu', 'OFF-006-XYZ', '2020-07-18', 'ANT-006-ABC', '2021-11-22', FALSE),
+(NULL, 7, 'PC-007', 'DOMINIO.COM', 'tstubbert6@independent.co.uk', 'OFF-007-XYZ', '2024-08-02', 'ANT-007-ABC', '2019-12-01', TRUE),
+(NULL, 8, 'PC-008', 'DOMINIO.COM', 'tvittel7@dailymotion.com', 'OFF-008-XYZ', '2022-05-26', 'ANT-008-ABC', '2020-02-14', FALSE),
+(NULL, 9, 'PC-009', 'DOMINIO.COM', 'dbordessa8@omniture.com', 'OFF-009-XYZ', '2021-06-15', 'ANT-009-ABC', '2022-08-11', TRUE),
+(NULL, 10, 'PC-010', 'DOMINIO.COM', 'dvasic9@chron.com', 'OFF-010-XYZ', '2025-07-21', 'ANT-010-ABC', '2018-11-09', FALSE),
+(NULL, 11, 'PC-011', 'DOMINIO.COM', 'bbalcersa@businessinsider.com', 'OFF-011-XYZ', '2024-01-30', 'ANT-011-ABC', '2023-02-17', TRUE),
+(NULL, 12, 'PC-012', 'DOMINIO.COM', 'dtolefreeb@netvibes.com', 'OFF-012-XYZ', '2020-10-03', 'ANT-012-ABC', '2024-10-08', FALSE),
+(NULL, 13, 'PC-013', 'DOMINIO.COM', 'sheliarc@privacy.gov.au', 'OFF-013-XYZ', '2018-02-12', 'ANT-013-ABC', '2020-07-19', TRUE),
+(NULL, 14, 'PC-014', 'DOMINIO.COM', 'gshortlandd@histats.com', 'OFF-014-XYZ', '2022-12-17', 'ANT-014-ABC', '2021-04-14', FALSE),
+(NULL, 15, 'PC-015', 'DOMINIO.COM', 'jmccurtaine@hao123.com', 'OFF-015-XYZ', '2023-05-09', 'ANT-015-ABC', '2025-02-28', TRUE),
+(NULL, 16, 'PC-016', 'DOMINIO.COM', 'tdahlf@domainmarket.com', 'OFF-016-XYZ', '2024-06-28', 'ANT-016-ABC', '2022-01-06', FALSE),
+(NULL, 17, 'PC-017', 'DOMINIO.COM', 'acobbing@unicef.org', 'OFF-017-XYZ', '2020-08-19', 'ANT-017-ABC', '2023-11-15', TRUE),
+(NULL, 18, 'PC-018', 'DOMINIO.COM', 'mjessenh@g.co', 'OFF-018-XYZ', '2021-09-04', 'ANT-018-ABC', '2020-10-21', FALSE),
+(NULL, 19, 'PC-019', 'DOMINIO.COM', 'qdeambrosii@marketwatch.com', 'OFF-019-XYZ', '2019-05-23', 'ANT-019-ABC', '2025-04-17', TRUE),
+(NULL, 20, 'PC-020', 'DOMINIO.COM', 'cforsythej@amazon.co.jp', 'OFF-020-XYZ', '2024-09-12', 'ANT-020-ABC', '2023-08-03', FALSE),
+(NULL, 21, 'PC-021', 'DOMINIO.COM', 'amanusk@cafepress.com', 'OFF-021-XYZ', '2021-07-15', 'ANT-021-ABC', '2024-01-09', TRUE),
+(NULL, 22, 'PC-022', 'DOMINIO.COM', 'apollandl@google.com.au', 'OFF-022-XYZ', '2023-10-01', 'ANT-022-ABC', '2025-06-25', FALSE),
+(NULL, 23, 'PC-023', 'DOMINIO.COM', 'lyepiskovm@amazon.com', 'OFF-023-XYZ', '2020-03-11', 'ANT-023-ABC', '2021-09-02', TRUE),
+(NULL, 24, 'PC-024', 'DOMINIO.COM', 'wgoddenn@smugmug.com', 'OFF-024-XYZ', '2022-11-13', 'ANT-024-ABC', '2023-07-19', FALSE),
+(NULL, 25, 'PC-025', 'DOMINIO.COM', 'cgreenroddo@cnet.com', 'OFF-025-XYZ', '2018-08-21', 'ANT-025-ABC', '2019-10-16', TRUE),
+(NULL, 26, 'PC-026', 'DOMINIO.COM', 'rashbep@homestead.com', 'OFF-026-XYZ', '2025-04-05', 'ANT-026-ABC', '2020-05-21', FALSE),
+(NULL, 27, 'PC-027', 'DOMINIO.COM', 'amccheyneq@example.com', 'OFF-027-XYZ', '2024-05-14', 'ANT-027-ABC', '2023-09-23', TRUE),
+(NULL, 28, 'PC-028', 'DOMINIO.COM', 'rbullmanr@patch.com', 'OFF-028-XYZ', '2021-01-18', 'ANT-028-ABC', '2022-04-07', FALSE),
+(NULL, 29, 'PC-029', 'DOMINIO.COM', 'acyseleys@odnoklassniki.ru', 'OFF-029-XYZ', '2019-06-27', 'ANT-029-ABC', '2020-12-29', TRUE),
+(NULL, 30, 'PC-030', 'DOMINIO.COM', 'fscaddingt@salon.com', 'OFF-030-XYZ', '2022-09-10', 'ANT-030-ABC', '2024-11-15', FALSE),
+(NULL, 31, 'PC-031', 'DOMINIO.COM', 'cduthieu@foxnews.com', 'OFF-031-XYZ', '2023-12-28', 'ANT-031-ABC', '2025-07-03', TRUE),
+(NULL, 32, 'PC-032', 'DOMINIO.COM', 'ghaldenbyv@spiegel.de', 'OFF-032-XYZ', '2020-02-19', 'ANT-032-ABC', '2021-06-30', FALSE),
+(NULL, 33, 'PC-033', 'DOMINIO.COM', 'rgettingsw@google.com', 'OFF-033-XYZ', '2018-06-08', 'ANT-033-ABC', '2020-09-04', TRUE),
+(NULL, 34, 'PC-034', 'DOMINIO.COM', 'ndrinkallx@dot.gov', 'OFF-034-XYZ', '2024-04-17', 'ANT-034-ABC', '2025-01-29', FALSE),
+(NULL, 35, 'PC-035', 'DOMINIO.COM', 'bbambridgey@soup.io', 'OFF-035-XYZ', '2022-10-24', 'ANT-035-ABC', '2023-03-06', TRUE),
+(NULL, 36, 'PC-036', 'DOMINIO.COM', 'mpottz@odnoklassniki.ru', 'OFF-036-XYZ', '2019-07-31', 'ANT-036-ABC', '2021-02-11', FALSE),
+(NULL, 37, 'PC-037', 'DOMINIO.COM', 'aclurow10@bloglovin.com', 'OFF-037-XYZ', '2023-11-04', 'ANT-037-ABC', '2024-05-28', TRUE),
+(NULL, 38, 'PC-038', 'DOMINIO.COM', 'blitster11@springer.com', 'OFF-038-XYZ', '2021-05-01', 'ANT-038-ABC', '2023-08-19', FALSE),
+(NULL, 39, 'PC-039', 'DOMINIO.COM', 'kscully12@nationalgeographic.com', 'OFF-039-XYZ', '2020-12-06', 'ANT-039-ABC', '2021-07-14', TRUE),
+(NULL, 40, 'PC-040', 'DOMINIO.COM', 'ksomerset13@apple.com', 'OFF-040-XYZ', '2024-02-02', 'ANT-040-ABC', '2024-09-25', FALSE),
+(NULL, 41, 'PC-041', 'DOMINIO.COM', 'rgutowski14@t-online.de', 'OFF-041-XYZ', '2021-03-23', 'ANT-041-ABC', '2022-02-18', TRUE),
+(NULL, 42, 'PC-042', 'DOMINIO.COM', 'nklos15@mtv.com', 'OFF-042-XYZ', '2018-09-09', 'ANT-042-ABC', '2020-08-20', FALSE),
+(NULL, 43, 'PC-043', 'DOMINIO.COM', 'jingraham16@smh.com.au', 'OFF-043-XYZ', '2022-12-29', 'ANT-043-ABC', '2025-06-07', TRUE),
+(NULL, 44, 'PC-044', 'DOMINIO.COM', 'btriggs17@constantcontact.com', 'OFF-044-XYZ', '2023-01-16', 'ANT-044-ABC', '2024-04-12', FALSE),
+(NULL, 45, 'PC-045', 'DOMINIO.COM', 'ebenoey18@columbia.edu', 'OFF-045-XYZ', '2020-06-08', 'ANT-045-ABC', '2021-01-27', TRUE),
+(NULL, 46, 'PC-046', 'DOMINIO.COM', 'gwestall19@businesswire.com', 'OFF-046-XYZ', '2024-07-19', 'ANT-046-ABC', '2025-05-20', FALSE),
+(NULL, 47, 'PC-047', 'DOMINIO.COM', 'dgatland1a@samsung.com', 'OFF-047-XYZ', '2019-02-25', 'ANT-047-ABC', '2022-06-09', TRUE),
+(NULL, 48, 'PC-048', 'DOMINIO.COM', 'fduffie1b@eepurl.com', 'OFF-048-XYZ', '2021-11-14', 'ANT-048-ABC', '2023-10-30', FALSE),
+(NULL, 49, 'PC-049', 'DOMINIO.COM', 'mdankov1c@de.vu', 'OFF-049-XYZ', '2025-03-08', 'ANT-049-ABC', '2025-07-11', TRUE),
+(NULL, 50, 'PC-050', 'DOMINIO.COM', 'pranstead1d@tamu.edu', 'OFF-050-XYZ', '2020-05-25', 'ANT-050-ABC', '2021-12-16', FALSE);
