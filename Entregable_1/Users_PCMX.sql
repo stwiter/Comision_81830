@@ -9,7 +9,7 @@ USE DATABASE Bitacora;
 -- Una vez creada la DB procedemos a crear las tablas según el critrerio de nuestro diagrama 
 
 CREATE TABLE Usuarios (
-    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    id_Usuario INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	nombre VARCHAR(30) NOT NULL,
     apellido_paterno VARCHAR(30) NOT NULL,
     apellido_materno VARCHAR(30) NOT NULL,
@@ -74,3 +74,16 @@ INSERT INTO Usuarios (id, nombre, apellido_paterno, apellido_materno, email, uni
 (50, 'Zelma', 'Orpwood', 'Reinert', 'zreinert1d@domainmarket.com', null, '2011-08-03');
 
     -- Insertamos la TABLA "Password" esto tendra relación con la TABLA "Usuarios"
+
+    CREATE TABLE IF NOT EXIST Password (
+        id_password PRIMARY KEY AUTO_INCREMENT NOT NULL,
+        nombre VARCHAR(30) NOT NULL,
+        apellido_paterno VARCHAR(30) NOT NULL,
+        apellido_materno VARCHAR(30) NOT NULL,
+        email VARCHAR(50) UNIQUE,
+        psw_office365 VARCHAR(20),
+        psw_equipo VARCHAR(20),
+        user_netship VARCHAR(10),
+        psw_netship VARCHAR(10),
+        activo BOOLEAN
+    );
