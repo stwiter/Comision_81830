@@ -4,7 +4,7 @@ CREATE DATABASE Bitacora;
 
 -- Despues de crear la db procedemos a actualizar para que refresque y la usamos para activarla
 
-USE DATABASE Bitacora;
+USE bitacora;
 
 -- Una vez creada la DB procedemos a crear las tablas según el critrerio de nuestro diagrama 
 
@@ -20,7 +20,7 @@ CREATE TABLE Usuarios (
 
 -- Insertamos datos a nuestras columnas para que tengan un dato o información
 
-INSERT INTO Usuarios (id, nombre, apellido_paterno, apellido_materno, email, unidad_de_negocio, fecha_ingreso)
+INSERT INTO Usuarios (id_usuario, nombre, apellido_paterno, apellido_materno, email, unidad_de_negocio, fecha_ingreso)
     VALUES 
 (1, 'Freemon', 'Creaven', 'Bingle', 'fbingle0@prnewswire.com', null, '2024-12-25'),
 (2, 'Mimi', 'Isaksen', 'Finessy', 'mfinessy1@ucla.edu', null, '2016-10-26'),
@@ -73,17 +73,18 @@ INSERT INTO Usuarios (id, nombre, apellido_paterno, apellido_materno, email, uni
 (49, 'Eduard', 'Peakman', 'Bolver', 'ebolver1c@ning.com', null, '2008-03-27'),
 (50, 'Zelma', 'Orpwood', 'Reinert', 'zreinert1d@domainmarket.com', null, '2011-08-03');
 
+
     -- Insertamos la TABLA "Password" esto tendra relación con la TABLA "Usuarios"
 
-    CREATE TABLE IF NOT EXIST Password (
-        id_password PRIMARY KEY AUTO_INCREMENT NOT NULL,
-        nombre VARCHAR(30) NOT NULL,
-        apellido_paterno VARCHAR(30) NOT NULL,
-        apellido_materno VARCHAR(30) NOT NULL,
-        email VARCHAR(50) UNIQUE,
-        psw_office365 VARCHAR(20),
-        psw_equipo VARCHAR(20),
-        user_netship VARCHAR(10),
-        psw_netship VARCHAR(10),
-        activo BOOLEAN
-    );
+CREATE TABLE Passwords (
+    id_password INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nombre VARCHAR(30) NOT NULL,
+    apellido_paterno VARCHAR(30) NOT NULL,
+    apellido_materno VARCHAR(30) NOT NULL,
+    email VARCHAR(50) UNIQUE,
+    psw_office365 VARCHAR(20),
+    psw_equipo VARCHAR(20),
+    user_netship VARCHAR(10),
+    psw_netship VARCHAR(10),
+    activo BOOLEAN
+);
