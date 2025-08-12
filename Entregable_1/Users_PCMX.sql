@@ -74,17 +74,17 @@ INSERT INTO Usuarios (id_usuario, nombre, apellido_paterno, apellido_materno, em
 (50, 'Zelma', 'Orpwood', 'Reinert', 'zreinert1d@domainmarket.com', null, '2011-08-03');
 
 
-    -- Insertamos la TABLA "Password" esto tendra relación con la TABLA "Usuarios"
+    -- Insertamos la TABLA "Credenciales" esto tendra relación con la TABLA "Usuarios"
 
-CREATE TABLE Passwords (
-    id_password INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+CREATE TABLE Credenciales (
+    id_credenciales INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     nombre VARCHAR(30) NOT NULL,
     apellido_paterno VARCHAR(30) NOT NULL,
     apellido_materno VARCHAR(30) NOT NULL,
     email VARCHAR(50) UNIQUE,
-    psw_office365 VARCHAR(20),
-    psw_equipo VARCHAR(20),
+    cre_office365 VARCHAR(20),
+    cre_equipo VARCHAR(20),
     user_netship VARCHAR(10),
-    psw_netship VARCHAR(10),
+    cre_netship VARCHAR(10),
     activo BOOLEAN
 );
